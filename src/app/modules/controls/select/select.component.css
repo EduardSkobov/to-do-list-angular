@@ -1,0 +1,38 @@
+.list-item {
+    height: 30px;
+    font-size: 20px;
+    padding-left: 8px;
+    padding-top: 8px;
+    background: #DBE2EF;
+}
+
+.control{
+    position:relative;
+}
+
+.list-item.selected{
+    background: #3F72AF;
+    color: white;
+}
+
+.list-item:hover{
+    height: 30px;
+    background: linear-gradient(0deg, rgba(37, 127, 234, 0.3), rgba(37, 127, 234, 0.3)), #BFCBE3;
+}
+
+.list{
+    border: 2px solid #257FEA;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-top: 2px;
+    font-size: 20px;
+    overflow: hidden;
+    position: absolute;
+    margin-left: 2px;
+    will-change: transform;
+    width: 99%;
+}
+
+.placeholder{
+    height: 31px;
+}

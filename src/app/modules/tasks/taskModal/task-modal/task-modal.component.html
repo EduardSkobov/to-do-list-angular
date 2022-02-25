@@ -1,0 +1,43 @@
+<app-modal
+    [modalTitle]="modalTitle" 
+    [minWidth]="720" 
+    [minHeigth]="352" 
+    [close]="close">
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="w-50">
+                <app-input 
+                    [label]="'Имя'" 
+                    [required]="true" 
+                    formControlName="name">
+                </app-input>
+            </div>
+            <div class="w-50">
+                <app-select 
+                    [label]="'Категория'"
+                    formControlName="category"
+                    [data]="categories"
+                    [selectedItem]="this.selectedCategory"
+                ></app-select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="w-100">
+                <app-textarea 
+                    [label]="'Описание'"  
+                    formControlName="description">
+                </app-textarea>
+            </div>
+        </div>
+        <div class="row" style="justify-content: flex-end;">
+            <button 
+                type="submit" 
+                class="primary" 
+                [disabled]="!taskForm.valid" 
+                style="margin-right: 15px;">
+                {{isEditModalMode ? "Сохранить" : "Создать"}}
+            </button>
+            <button (click)="close()" class="secondary" >Закрыть</button>
+        </div>
+    </form>
+</app-modal>

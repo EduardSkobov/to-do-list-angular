@@ -1,0 +1,34 @@
+<app-modal  
+    [modalTitle]="modalTitle" 
+    [minWidth]="720" minHeigth="352" 
+    [close]="close">
+    <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="w-100">
+                <app-input 
+                    [label]="'Имя'" 
+                    [required]="true" 
+                    formControlName="name">
+                </app-input>
+            </div>
+        </div>
+        <div class="row">
+            <div class="w-100">
+                <app-textarea 
+                    [label]="'Описание'" 
+                    formControlName="description">
+                </app-textarea>
+            </div>
+        </div>
+        <div class="row" style="justify-content: flex-end;">
+            <button 
+                type="submit" 
+                class="primary" 
+                [disabled]="!categoryForm.valid" 
+                style="margin-right: 15px;">
+                {{isEditModalMode ? "Сохранить" : "Создать"}}
+            </button>
+            <button (click)="close()" class="secondary" >Закрыть</button>
+        </div>
+    </form>
+</app-modal>

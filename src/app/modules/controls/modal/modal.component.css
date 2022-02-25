@@ -1,0 +1,40 @@
+:host {
+    width: 100%;
+}
+
+.modal-content{
+    padding: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #DBE2EF;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.modal-fade{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa.fa-times{
+    color:#3F72AF;
+    font-size: 25px;
+}
+
+.modal-title{
+    color: #3F72AF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+}

@@ -1,0 +1,30 @@
+<div style="height: 100%;" *mobxAutorun>
+    <app-header >
+        <div class="task-btn-container">
+            <a (click)="showAddModalTask()" class="add-task-btn">Добавить задачу</a>
+        </div>
+    </app-header>
+    <app-page-content >
+    <ng-container  *ngFor="let item of taskStore.tasks"  >
+        <app-task-list-item
+            [remove]="markDeletingTask"
+            [edit]="editTask"
+            [item]="item"
+        ></app-task-list-item>
+    </ng-container>
+    </app-page-content>
+    <app-task-modal 
+        *ngIf="showTaskModal"
+        [modalTitle]="taskModalTitle"
+        [close]="closeTaskModal" 
+        [save]="editingTask ? saveTask : addTask"
+        [task]="editingTask">
+    </app-task-modal>
+    <app-confirm-modal
+        *ngIf="showConfirmModal"
+        [close]="closeConfirmModal" 
+        [title]="'Удаление задачи'"
+        [content]="'Уверены что хотите удалить задачу ' + deletingTask.name"
+        [ok]="removeTask">
+    </app-confirm-modal>
+</div>

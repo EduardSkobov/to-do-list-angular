@@ -1,0 +1,12 @@
+<app-modal  
+    [modalTitle]="title"
+    [close]="close" 
+    [minWidth]="580">
+        <div class="row">
+            {{content}}
+        </div>
+        <div class="row" style="justify-content: flex-end;">
+            <button (click)="ok()" class="primary" style="margin-right: 15px;">Да</button>
+            <button (click)="close()" class="secondary" >Нет</button>
+        </div>
+</app-modal>

@@ -1,0 +1,13 @@
+<div>
+    <div class="modal-fade"></div>
+    <div class="modal-content"  
+        [style.width.px]="minWidth"
+        [style.heigth.px]="minHeigth"
+    >
+        <div class="modal-header">
+            <div class="modal-title">{{modalTitle}}</div>
+            <div><i (click)="close()" class="fa fa-times" aria-hidden="true"></i></div>
+        </div>
+        <ng-content ></ng-content>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+textarea{
+    background: #DBE2EF;
+    border: none;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 65px;
+}
+
+textarea:hover, textarea:focus{
+    border:none;
+    outline: none;
+}
+
+textarea{
+    width: -webkit-fill-available;
+}

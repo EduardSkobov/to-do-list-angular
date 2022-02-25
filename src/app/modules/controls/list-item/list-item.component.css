@@ -1,0 +1,29 @@
+:host {
+    display: flex;
+    border-bottom: 1px solid #3F72AF;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 20px;
+}
+
+:host:hover{
+    background: rgba(37, 127, 234, 0.2);
+}
+
+.description{
+    font-weight: 100;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+:host i.fa {
+    font-size: 26px;
+    color: #3F72AF;
+    padding: 5px;
+}

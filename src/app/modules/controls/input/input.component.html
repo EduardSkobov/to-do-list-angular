@@ -1,0 +1,10 @@
+<div class="control">
+    <fieldset>
+        <legend class="field-title" [class.required]="required">{{label}}</legend>
+        <input 
+            type="text" 
+            [value]="value" 
+            (change)="onChange($event.target.value)" 
+            placeholder="Введите имя задачи">
+    </fieldset>
+</div>

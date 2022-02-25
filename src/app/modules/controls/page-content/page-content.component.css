@@ -1,0 +1,11 @@
+:host{
+    width: 100%;
+    background: #DBE2EF;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.page-content{
+    width: 70%;
+}

@@ -1,0 +1,28 @@
+<div style="height: 100%;" *mobxAutorun>
+    <app-header>
+        <div class="category-btn-container">
+            <a (click)="showAddModal()" class="add-task-btn">Добавить категорию</a>
+        </div>
+    </app-header>
+    <app-page-content>
+        <app-list 
+            [data]="categoriesStore.categories"
+            [removeItem]="markDeleting"
+            [editItem]="editCategory"
+        ></app-list>
+    </app-page-content>
+    <app-category-modal
+        *ngIf="showCategoryModal"
+        [modalTitle]="categryModalTitle"
+        [close]="closeCategoryModal" 
+        [save]="editingCategry ? saveCategory : addCategory"
+        [category]="editingCategry">
+    </app-category-modal>
+    <app-confirm-modal
+        *ngIf="showConfirmModal"
+        [close]="closeConfirmModal" 
+        [title]="'Удаление категории'"
+        [content]="'Уверены что хотите удалить категорию ' + deletingCategroy.name"
+        [ok]="removeCategory">
+    </app-confirm-modal>
+</div>

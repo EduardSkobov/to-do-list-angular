@@ -1,0 +1,7 @@
+<ng-container *ngFor="let item of data">
+    <app-list-item
+        [item]="item"
+        [remove]="removeItem"
+        [edit]="editItem"
+    ></app-list-item>
+</ng-container>

@@ -1,0 +1,14 @@
+<div *mobxAutorun>
+    <div>
+        <span class="name">{{item.name}}</span>
+        <span class="category"><i class="fa fa-folder"></i>{{categoriesStore.getCategoryName(item.categoryId)}}</span>
+    </div>
+    <div>
+        <span class="description">{{item.description}}</span>
+    </div>
+</div>
+<div>
+    <i (click)="edit(item)" class="fa fa-pencil"></i>
+    <i (click)="remove(item)" class="fa fa-trash"></i>
+</div>
+

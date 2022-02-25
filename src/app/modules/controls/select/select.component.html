@@ -1,0 +1,17 @@
+<div (focusout)="onClickOut()" class="control" (click)="onClick()">
+    <fieldset>
+        <legend>{{label}}</legend>
+        <div class="placeholder">
+            <div>{{selectedItem?.value ? selectedItem.value : 'Выбирите значение'}}</div>    
+        </div> 
+    </fieldset>
+    <div class="list" *ngIf="open">
+        <div 
+            class="list-item" 
+            [class.selected]="selectedItem?.id === item.id"
+            (click)="onClickItem(item)" 
+            *ngFor="let item of data">
+            {{item.value}}
+        </div>
+    </div>
+</div>
